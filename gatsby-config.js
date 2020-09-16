@@ -4,13 +4,14 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Styled Components Starter`,
+    title: `Gatsby Tailwind Starter`,
     author: `Adam Romański`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-stylelint`,
     {
       resolve: 'gatsby-plugin-layout',
       options: {
@@ -29,20 +30,19 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-stylelint',
-      options: { files: ['**/*.{js,jsx}'], failOnError: false },
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        displayName: true,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require('tailwindcss'),
+          require('./tailwind.config.js'), // Optional: Load custom Tailwind CSS configuration
+        ],
       },
     },
     // {

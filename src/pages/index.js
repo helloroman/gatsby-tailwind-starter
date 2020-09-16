@@ -1,5 +1,11 @@
 import React from 'react';
 
-const IndexPage = () => <p>Hello Roman</p>;
+const HomePage = () => {
+  return (
+    <div>
+      <h1 className="">Hello Roman</h1>
+    </div>
+  );
+};
 
-export default IndexPage;
+export default HomePage;
