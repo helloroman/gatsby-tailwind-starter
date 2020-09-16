@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-layout',
       options: {
-        component: require.resolve('./src/components/templates/MainTemplate/MainTemplate.js'),
+        component: require.resolve('./src/templates/MainTemplate/MainTemplate.js'),
       },
     },
     {
