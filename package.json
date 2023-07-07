@@ -69,7 +69,7 @@
     "prettier": "^2.1.2",
     "react-svg-loader": "^3.0.3",
     "react-test-renderer": "^16.13.1",
-    "stylelint": "^13.7.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-webpack-plugin": "^2.1.0"
   },
